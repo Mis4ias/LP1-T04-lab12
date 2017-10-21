@@ -69,12 +69,12 @@ void merge(vector<int> &vtr1,vector<int> &vtr2, vector<int> &vtr3){
 
 bool partition(vector<int> &vtr1,vector<int> &vtr2, vector<int> &vtr3,int chave){
 
-	for (unsigned int i = 0; i <vtr1.size() ; ++i){
-		if(vtr1[i]>chave){
-			vtr3.push_back(vtr1[i]);
+	for (vector<int>::iterator i = vtr1.begin(); i <vtr1.end() ; ++i){
+		if(*i>chave){
+			vtr3.push_back(*i);
 		}
-		if(vtr1[i]<chave){
-			vtr2.push_back(vtr1[i]);
+		if(*i<chave){
+			vtr2.push_back(*i);
 		}else{}
 	}
 	if(vtr1.size()==(vtr2.size()+vtr3.size())){
